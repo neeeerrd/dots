@@ -1,5 +1,5 @@
-<h1 align="center">My dots</h1>
-<h2 align="center">Revision 1</h2>
+<h1 align="center">my dots</h1>
+<h2 align="center">revision one</h2>
 
 ![Screenshot of desktop](./images/desktop.png)
 
