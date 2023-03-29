@@ -1,0 +1,15 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Import additional configuration files
+#
+# Imports are loaded in order, skipping all missing files, with the importing
+# file being loaded last. If a field is already present in a previous import, it
+# will be replaced.
+import:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+window:
+  padding:
+    x: 5
+    y: 5
+  decorations: buttonless
+
