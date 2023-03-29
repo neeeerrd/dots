@@ -1,5 +1,4 @@
 <h1 align="center">my dots</h1>
-<h2 align="center">revision one</h2>
 
 ![Screenshot of desktop](./images/desktop.png)
 
@@ -19,4 +18,4 @@
 
 ![Screenshot of neovim](./images/nvim.png)
 
-<h6 align="center">:)</h6>
+<h6 align="center">v1.0.0</h6>
