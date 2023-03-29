@@ -18,4 +18,4 @@
 
 ![Screenshot of neovim](./images/nvim.png)
 
-<h6 align="center">v1.0.0</h6>
+<h6 align="center">v1</h6>
