@@ -1,0 +1,11 @@
+theme = "custom_catppuccin"
+[editor]
+color-modes = true
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"

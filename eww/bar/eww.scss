@@ -1,0 +1,68 @@
+* {
+  all: unset;
+}
+
+.module {
+  @extend %module;
+  margin-right: 10px;
+}
+
+.left {
+  margin-left: 10px;
+}
+
+.right {
+  margin-right: 10px;
+}
+
+.module-right {
+  @extend %module;
+  margin-left: 10px;
+}
+
+%module {
+  background-color: rgba(30,30,46,0.5);
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  border: 4px solid #b4befe;
+  color: #b4befe;
+  font-size: 20px;
+}
+
+.asahi-button {
+  @extend %button-base;
+  font-family: "asahi";
+}
+
+.button {
+  @extend %button-base
+}
+
+label {
+  font-family: "Space Grotesk", "asahi", "Font Awesome 6 Free"
+}
+
+%button-base {
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid rgba(0,0,0,0)
+}
+
+%button-base:hover {
+  background-color: rgba(30,30,46,0.75);
+  border: 2px solid #b4befe;
+}
+
+.bar {
+  background-color: rgba(0,0,0,0);
+}
+
+.empty {
+  background-color: rgba(0,0,0,0);
+  color: rgba(0,0,0,0);
+}

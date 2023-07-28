@@ -1,0 +1,86 @@
+;; wow, thats a lotta parentheses 
+
+(defwindow eww-bar :monitor 0 :geometry 
+  (geometry :x "0" :y "0" :anchor "top center" :height "75px" :width "100%") 
+  :stacking "overlay" :exclusive true :focusable false :namespace "eww-bar" 
+  (bar)
+)
+(defwidget bar []
+  (centerbox :orientation "h" :class "bar"
+    (left)
+    (player)
+    (right)
+  )
+)
+(defwidget left []
+  (box :orientation "h" :class "left" :halign "start" :hexpand false :vexpand false :space-evenly false
+    (launcher)
+    (workspaces)
+  )
+)
+(defwidget launcher []
+  (box :orientation "h" :class "module"
+    (button :onclick "scripts/wofi" :class "asahi-button"
+      (label :text "")
+    )
+  )
+)
+(defwidget workspaces []
+  (box :orientation "h" :class "module"
+    (button :class "button" :onclick "hyprctl dispatch workspace 1"
+      (label :text "1")
+    )
+    (button :class "button" :onclick "hyprctl dispatch workspace 2"
+      (label :text "2")
+    )
+    (button :class "button" :onclick "hyprctl dispatch workspace 3"
+      (label :text "3")
+    )
+    (button :class "button" :onclick "hyprctl dispatch workspace 4"
+      (label :text "4")
+    )
+    (button :class "button" :onclick "hyprctl dispatch workspace 5"
+      (label :text "5")
+    )
+    (button :class "button" :onclick "hyprctl dispatch workspace 6"
+      (label :text "6")
+    )
+    (button :class "button" :onclick "hyprctl dispatch workspace 7"
+      (label :text "7")
+    )
+    (button :class "button" :onclick "hyprctl dispatch workspace 8"
+      (label :text "8")
+    )
+    (button :class "button" :onclick "hyprctl dispatch workspace 9"
+      (label :text "9")
+    )
+    (button :class "button" :onclick "hyprctl dispatch workspace 10"
+      (label :text "10")
+    )
+  )
+)
+(defwidget player []
+  (box :orientation "h" :class {song != "" ? "module" : "empty"} :halign "center" :hexpand false :vexpand false 
+    (label :text {song != "" ? "${music} ${song}" : "" })
+  )
+)
+(defwidget right []
+  (box :orientation "h" :class "right" :halign "end" :hexpand false :vexpand false :space-evenly false
+    (battery)
+    (time)
+  )
+)
+(defwidget battery []
+  (box :orientation "h" :class "module-right"
+    (label :text "${capacity}%")
+  )
+)
+(defwidget time []
+  (box :orientation "h" :class "module-right"
+    (label :text "${time-cmd}")
+  )
+)
+(defpoll time-cmd :interval "10s" "date +'%I:%M %p'")
+(defpoll capacity :interval "10s" "scripts/battery")
+(deflisten music :initial "" "playerctl --follow status | scripts/record-player")
+(deflisten song :initial "" "playerctl --follow metadata --format '{{ title }} - {{ artist }}'")

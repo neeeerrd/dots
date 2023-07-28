@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# i've got a record player that was made in 2014...
+while read -r PLAYER_STATUS; do
+  if [[ $PLAYER_STATUS == "Playing" ]]; then
+    echo ""
+  elif [[ $PLAYER_STATUS == "Paused" ]]; then
+    echo ""
+  elif [[ $PLAYER_STATUS == "Stopped" ]]; then
+    echo ""
+    eww update player_widget=""
+  fi
+done

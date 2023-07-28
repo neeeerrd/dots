@@ -1,0 +1,27 @@
+* {
+  all: unset;
+}
+
+button {
+  @extend %template;
+  margin: 10px;
+  background-color: rgba(0,0,0,0);
+}
+
+button:hover {
+  background-color: rgb(30,30,46);
+}
+
+.powermenu {
+  @extend %template;
+  background-color: rgba(30,30,46,0.5);
+}
+
+%template {
+  border: 5px solid #b4befe;
+  border-radius: 20px;
+  padding: 15px;
+  font-family: "Font Awesome 6 Free";
+  font-size: 24px;
+  color: #b4befe;
+}

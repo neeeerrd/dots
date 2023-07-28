@@ -1,0 +1,20 @@
+;; funny comment here
+
+(defwindow eww-powermenu :monitor 0 :geometry
+  (geometry :x "0" :y "0" :anchor "center center" :height "150px" :width "500px")
+  :stacking "overlay" :exclusive true :focusable false :namespace "eww-powermenu"
+  (powermenu)
+)
+(defwidget powermenu []
+  (box :orientation "h" :class "powermenu" :space-evenly true
+    (button :onclick "systemctl suspend"
+      (label :text "")
+    )
+    (button :onclick "reboot"
+      (label :text "")
+    )
+    (button :onclick "shutdown now"
+      (label :text "")
+    )
+  )
+)
