@@ -1,0 +1,47 @@
+* {
+    font-family: CozetteVector;
+    font-size: 16pt;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background-color: #1a1b26;
+}
+
+#workspaces button {
+    color: #a9b1d6;
+    border: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#workspaces button:hover {
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+    transition: none;
+    color: #f7768e;
+}
+
+#workspaces button.focused {
+    color: #faba4a;
+}
+
+#clock {
+    color: #9ece6a;
+    padding-right: 10px;
+}
+
+#mpris {
+    padding-left: 10px;
+    color: #a9b1d6;
+}
+
+#battery {
+    color: #7dcfff;
+}
+
+#network {
+    color: #f7768e;
+}

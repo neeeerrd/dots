@@ -1,0 +1,4 @@
+theme = "tokyonight_night"
+
+[editor]
+color-modes = true

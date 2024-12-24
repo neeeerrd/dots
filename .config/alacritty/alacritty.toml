@@ -1,0 +1,10 @@
+[general]
+import = [
+  "~/.config/alacritty/tokyonight_night.toml"
+]
+
+[window]
+padding = { x = 20, y = 20 }
+
+[font]
+normal = { family = "CozetteHiDpi", style = "Medium" }
